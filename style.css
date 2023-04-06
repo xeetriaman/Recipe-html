@@ -9,6 +9,7 @@ a{
 }
 :root{
     --primary-font:'Space Mono';
+    --clr-primary:hsl(172,67%,45%);
     --clr-neutral-1:hsl(183, 100%, 15%); 
     --clr-neutral-2:hsl(186, 14%, 43%);
     --clr-neutral-3:hsl(184, 14%, 56%);
@@ -55,18 +56,83 @@ label,input{
     padding: 10px 20px;
     background-color: var(--clr-neutral-4);
     border: none;
+    font-family: var(--primary-font);
+    color: var(--clr-neutral-1);
+    font-size: var(--font-input-size);
+    text-align: right;
 }
 .tips-group{
 display: flex;
 flex-wrap: wrap;
-gap:20px;
+
 }
 
+
 .tips-group .button{
-    background-color: var(--clr-neutral-2);
-    padding: 5px;
+    background-color: var(--clr-neutral-1);
+    padding: 10px 30px;
     border: none;
     color: var(--clr-white);
     font-size: var(--font-input-size);
-    width: 25%;
+    width: calc(33.33% - 20px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family:var(--primary-font);
+}
+.tips-group .button:hover{
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.calculation-result{
+background-color: var(--clr-neutral-1);
+width: 50%;
+padding: 30px 40px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+
+}
+.calculation-amount{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    
+}
+
+.main-title{
+    color: var(--clr-neutral-4);
+    font-size: 18px;
+}
+.subtitle{
+    color: var(--clr-neutral-3);
+    font-size: 14px;
+
+}
+
+.amount{
+    font-size: 30px;
+    color: var(--clr-primary);
+}
+
+.calculation-result .button{
+    width: 100%;
+    margin-top: auto;
+    background-color: var(--clr-neutral-4);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    font-family: var(--primary-font);
+    border-radius: 10px;
+    font-size: 18px;
+
+
+}
+.calculation-result .button:hover{
+    cursor: pointer;
+    background-color: var(--clr-primary);
+    transition: all 0.1s;
+    
 }
